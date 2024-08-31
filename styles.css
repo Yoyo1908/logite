@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.toolbar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background-color: #777;
+}
+
+.sandbox {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(15, 65px); /* 20 columns, each 30px wide */
+    grid-template-rows: repeat(10, 65px);    /* 20 rows, each 30px tall */
+    gap: 2px; /* Space between grid items */
+    border: 1px solid #010512;
+    background-color: #b4c1de;
+}
+
+.grid-container .grid-cell {
+    width: 65px;
+    height: 65px;
+    border: 1px solid #217cf4;
+    background-color: #abaaaa;
+    cursor: pointer;
+}
+
+.grid-container .grid-cell.active {
+    background-color: #add8e6; /* Highlighted color when active */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content button {
+    padding: 12px 16px;
+    display: block;
+  }
+  
+  .dropdown-content button:hover {
+    background-color: #f1f1f1;
+  }

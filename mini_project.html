@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logisim Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">Logic gates</button>
+            <div class="dropdown-content">
+              <button>AND</button>
+              <button>OR</button>
+              <button>NOT</button>
+            </div>
+          </div>
+          
+          <script>
+            function toggleDropdown() {
+              var dropdownContent = document.querySelector('.dropdown-content');
+              dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            }
+          </script>
+        <button>load</button>
+        <button id="undoButton">Undo</button>
+        <button id="clearButton">Clear</button>
+        <button>Connectors</button>
+        <button>GATES</button>
+        
+        <!-- Add more buttons for different gates -->
+    </div>
+    <div class="sandbox">
+        <!-- Grid container for the circuit area -->
+        <div class="grid-container" id="grid-container">
+            <!-- Grid cells will be dynamically added by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Add JavaScript at the end of the body -->
+    <script src="script.js"></script>
+</body>
+</html>
